@@ -16,12 +16,9 @@ class HogeService(
         // 取得したマップの値を使って、リザルトをアップデートする
         condition.hogeCList.forEach { conditionDetail ->
             val judge: Int = hogeMap[conditionDetail.hogeCD1] ?: HogeConstants.HOGE1
-            new = HogeResult(
-                hogeR1 = resultOld.hogeR1,
-                hogeR2 = resultOld.hogeR2,
-                hogeRList = resultOld.hogeRList.map { resultDetailOld ->
-                    HogeResultDetail(
-                        hogeRD1 = resultDetailOld.hogeRD1,
+            new = resultOld.copy(
+                hogeRList = resultOld.hogeRList.map {
+                    it.copy(
                         hogeRD2 = when {
                             judge < 1 -> "updateCompleted!"
                             judge in 2..10 -> "umm..."
@@ -29,7 +26,7 @@ class HogeService(
                         }
                     )
                 }
-            ).copy()
+            )
         }
         return new
     }
