@@ -13,7 +13,7 @@ fun equalRandom(num: Int) =
     Random.nextInt(10) == num
 
 fun main(){
-    multiply(10){// 無名関数の引数 it:Int
+    multiply(10) { // 無名関数の引数 it:Int
         println(it*it)
         if(equalRandom(it)) return
     }
