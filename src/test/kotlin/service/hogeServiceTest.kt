@@ -4,6 +4,7 @@ import data.HogeCondition
 import data.HogeConditionDetail
 import data.HogeResult
 import data.HogeResultDetail
+import enums.HogeEnum
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
@@ -33,12 +34,12 @@ class HogeServiceTest {
             hogeRepository.updateResult(any())
         } returns mockReturn
 
-        val result = hogeService.updateResult(CONDITION, RESULT_OLD, hogeInt)
+        val actualResultNew = hogeService.updateResult(CONDITION, RESULT_OLD, hogeInt)
 
         verify {
             hogeRepository.updateResult(hogeInt = hogeInt)
         }
-        assertEquals(expectedResultNew, result)
+        assertEquals(expectedResultNew, actualResultNew)
     }
 
     companion object {
@@ -56,7 +57,7 @@ class HogeServiceTest {
 
         private val RESULT_OLD =
             HogeResult(
-                hogeR1 = "mino",
+                hogeR1 = HogeEnum("mino"),
                 hogeR2 = "karubi",
                 hogeRList = listOf(
                     HogeResultDetail(
@@ -74,7 +75,7 @@ class HogeServiceTest {
                     "ccc" to 0
                 ),
                 HogeResult(
-                    hogeR1 = "mino",
+                    hogeR1 = RESULT_OLD.hogeR1,
                     hogeR2 = "karubi",
                     hogeRList = listOf(
                         HogeResultDetail(
@@ -90,7 +91,7 @@ class HogeServiceTest {
                     "ccc" to 10
                 ),
                 HogeResult(
-                    hogeR1 = "mino",
+                    hogeR1 = RESULT_OLD.hogeR1,
                     hogeR2 = "karubi",
                     hogeRList = listOf(
                         HogeResultDetail(
@@ -106,7 +107,7 @@ class HogeServiceTest {
                     "ccc" to 20
                 ),
                 HogeResult(
-                    hogeR1 = "mino",
+                    hogeR1 = RESULT_OLD.hogeR1,
                     hogeR2 = "karubi",
                     hogeRList = listOf(
                         HogeResultDetail(
