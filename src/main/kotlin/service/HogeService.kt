@@ -3,7 +3,6 @@ package service
 import constants.HogeConstants
 import data.HogeCondition
 import data.HogeResult
-import data.HogeResultDetail
 import repository.HogeRepository
 
 class HogeService(
@@ -12,11 +11,11 @@ class HogeService(
     fun updateResult(condition: HogeCondition, resultOld: HogeResult, hogeInt: Int): HogeResult {
         // 取得したデータをhogeMapとして返却する
         val hogeMap: Map<String, Int> = hogeRepository.updateResult(hogeInt)
-        var new = resultOld
+        var resultNew = resultOld
         // 取得したマップの値を使って、リザルトをアップデートする
         condition.hogeCList.forEach { conditionDetail ->
             val judge: Int = hogeMap[conditionDetail.hogeCD1] ?: HogeConstants.HOGE1
-            new = resultOld.copy(
+            resultNew = resultOld.copy(
                 hogeRList = resultOld.hogeRList.map {
                     it.copy(
                         hogeRD2 = when {
@@ -28,6 +27,6 @@ class HogeService(
                 }
             )
         }
-        return new
+        return resultNew
     }
 }
