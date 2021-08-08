@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="service.HogeServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-08-07T16:06:31" hostname="LAPTOP-VUF4MV4S" time="2.199">
+<testsuite name="service.HogeServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-08-08T01:29:21" hostname="LAPTOP-VUF4MV4S" time="1.745">
   <properties/>
-  <testcase name="[1] {ccc=0}, HogeResult(hogeR1=mino, hogeR2=karubi, hogeRList=[HogeResultDetail(hogeRD1=harami, hogeRD2=updateCompleted!)])" classname="service.HogeServiceTest" time="2.168"/>
-  <testcase name="[2] {ccc=10}, HogeResult(hogeR1=mino, hogeR2=karubi, hogeRList=[HogeResultDetail(hogeRD1=harami, hogeRD2=umm...)])" classname="service.HogeServiceTest" time="0.008"/>
-  <testcase name="[3] {ccc=20}, HogeResult(hogeR1=mino, hogeR2=karubi, hogeRList=[HogeResultDetail(hogeRD1=harami, hogeRD2=updateFailed...)])" classname="service.HogeServiceTest" time="0.007"/>
+  <testcase name="[1] {ccc=0}, HogeResult(hogeR1=mino, hogeR2=karubi, hogeRList=[HogeResultDetail(hogeRD1=harami, hogeRD2=updateCompleted!)])" classname="service.HogeServiceTest" time="1.686"/>
+  <testcase name="[2] {ccc=10}, HogeResult(hogeR1=mino, hogeR2=karubi, hogeRList=[HogeResultDetail(hogeRD1=harami, hogeRD2=umm...)])" classname="service.HogeServiceTest" time="0.02"/>
+  <testcase name="[3] {ccc=20}, HogeResult(hogeR1=mino, hogeR2=karubi, hogeRList=[HogeResultDetail(hogeRD1=harami, hogeRD2=updateFailed...)])" classname="service.HogeServiceTest" time="0.023"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

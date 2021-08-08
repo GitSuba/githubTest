@@ -32,24 +32,5 @@ class HogeService(
             ).copy()
         }
         return new
-//           resultOld.hogeRList.map {
-//                HogeResultDetail(
-//                    hogeRD1 = it.hogeRD1,
-//                    hogeRD2 = when {
-//                        judge < 1 -> "updateCompleted!"
-//                        judge in 2..10 -> "umm..."
-//                        else -> "updateFailed..."
-//                    }
-//                )
-//            }
-//            val resultNew = resultOld.hogeRList.map{
-//                it.copy(hogeRD2 = when {
-//                    judge < 1 -> "updateCompleted!"
-//                    judge in 2..10 -> "umm..."
-//                    else -> "updateFailed..."
-//                })
-//            }
-
-
     }
 }
