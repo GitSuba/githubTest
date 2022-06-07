@@ -4,8 +4,8 @@ import data.HogeCondition
 import data.HogeConditionDetail
 import data.HogeResult
 import data.HogeResultDetail
+import enums.HogeEnum
 import mapper.HogeMapper
-import java.time.LocalTime
 
 /**
  * HogeResultに値を入れる
@@ -29,10 +29,10 @@ class FugaRepository(
             )
         )
         val hogeList: List<String> = hogeMapper.mapping(condition)
-        val fuga1 = "mino"
+
         val fuga2 = "karubi"
         return HogeResult(
-            hogeR1 = fuga1,
+            hogeR1 = HogeEnum("mino"),
             hogeR2 = fuga2,
             hogeRList = listOf(
                 HogeResultDetail(
